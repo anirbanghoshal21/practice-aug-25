@@ -5,18 +5,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 
-namespace filestream_Q1
+namespace Directory_Q3
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            //File.Create("Basics.txt");
+            string path = @"C:\Users\Public\Anirban";
+            Console.WriteLine("Enter the file name");
+            string fname = Console.ReadLine();
+            File.Create(path+fname);
+            Console.WriteLine("file created successfully...");
 
-            FileStream fs = new FileStream("Basics.txt", FileMode.Truncate, FileAccess.Write);
-            Console.WriteLine("Truncated");
+            Directory.CreateDirectory("Results");
 
-            
+           
+
             Console.ReadLine();
         }
     }
